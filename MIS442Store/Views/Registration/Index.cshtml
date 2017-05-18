@@ -1,0 +1,37 @@
+﻿@using MIS442Store.DataLayer.DataModels
+@model List<Registration>
+
+<table>
+    <thead>
+        <tr>
+            <th>Registration ID</th>
+            <th>Registration Date</th>
+            <th>Registration Serial Number</th>
+            <th>Registration Verified</th>
+            <th>Registration User Name</th>
+            <th>Registration Address</th>
+            <th>Registration State</th>
+            <th>Registration City</th>
+            <th>Registration Zip</th>
+            <th>Registration Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var r in Model)
+        {
+            <tr>
+                <td>@r.RegistrationID</td>
+                <td>@r.RegistrationDate</td>
+                <td>@r.RegistrationSerialNumber</td>
+                <td>@r.RegistrationVerified</td>
+                <td>@r.RegistrationUserName</td>
+                <td>@r.RegistrationAddress</td>
+                <td>@r.RegistrationState</td>
+                <td>@r.RegistrationCity</td>
+                <td>@r.RegistrationZip</td>
+                <td>@r.RegistrationPhone</td>
+                @*<td>@Html.ActionLink("Edit Product", "Edit", "Product", new { @id = p.ProductID }, null)</td>*@
+            </tr>
+        }
+    </tbody>
+</table>

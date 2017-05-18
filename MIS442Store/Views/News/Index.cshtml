@@ -1,0 +1,13 @@
+﻿@model List<MIS442Store.DataLayer.DataModels.News>
+
+<h1>@ViewBag.Title</h1>
+@foreach(var items in Model)
+{
+    <div>
+        <h2>@items.title</h2> 
+        <p>@items.id</p> 
+        <p>@items.author</p>
+        <p>@items.body</p>
+        <p>@items.date</p>    
+    </div>
+}
